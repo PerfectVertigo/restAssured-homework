@@ -1,5 +1,6 @@
-package Deserialization;
-
+import Responses.SuccessfulResponse;
+import Responses.UnsuccessfulResponse;
+import Responses.UsersResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
@@ -14,7 +15,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class DeserTest{
+public class ThirdTest {
 
     @Test
     public void successfulRequest(){
@@ -72,7 +73,7 @@ public class DeserTest{
 
         UsersResponse usersResponse = response.body().as(UsersResponse.class);
 
-        //System.out.println(new ObjectMapper().writeValueAsString(usersResponse));
+        System.out.println(new ObjectMapper().writeValueAsString(usersResponse));
     }
 
     public void validateResponse(Response response){
