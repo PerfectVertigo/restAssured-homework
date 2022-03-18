@@ -1,4 +1,6 @@
+import Data.DataProviderClass;
 import io.restassured.*;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -8,7 +10,13 @@ import java.util.Map;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
-public class FirstTest extends Setup{
+public class FirstTest{
+
+    @BeforeMethod
+    public void setup(){
+        RestAssured.baseURI = "http://ergast.com";
+        RestAssured.basePath = "/api/f1/2017/circuits";
+    }
 
     public ArrayList<Integer> indexes;
     public List<Map<String, ?>> circuits;
