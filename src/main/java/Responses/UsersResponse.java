@@ -1,4 +1,4 @@
-package Deserialization;
+package Responses;
 
 import com.fasterxml.jackson.annotation.*;
 
