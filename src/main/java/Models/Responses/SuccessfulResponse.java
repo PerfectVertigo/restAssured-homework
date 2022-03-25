@@ -1,4 +1,4 @@
-package Responses;
+package Models.Responses;
 
 public class SuccessfulResponse {
     public int id;
