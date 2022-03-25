@@ -1,6 +1,6 @@
-import Responses.SuccessfulResponse;
-import Responses.UnsuccessfulResponse;
-import Responses.UsersResponse;
+import Models.Responses.SuccessfulResponse;
+import Models.Responses.UnsuccessfulResponse;
+import Models.Responses.UsersResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
